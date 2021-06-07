@@ -1,17 +1,10 @@
 import React from 'react';
 
 function Header(props) {
-    const skater = [
-        'Tony Hawk',
-        '55',
-        'San Diego',
-        '900'
-
-    ] 
     return (
         <div>
-            <h1>{skater}</h1>
-            <button>Click Me!</button>
+            <h1>Skater Base</h1>
+            <p>Start by creating an account and then adding in pro skaters to the database</p>
         </div>
     );
 }
