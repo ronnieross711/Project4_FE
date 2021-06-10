@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
-import Forms from './components/Forms';
-import './App.css';
+import Main from './components/Main';
+import './App.css'
+
 
 function App() {
+  
+  useEffect(() => {
+    fetch("http://localhost:8000/skaters/", {
+      mode: 'no-cors' // 'cors' by default
+    })
+    .then((result) => result.json())
+    .then((result) => {
+        console.log(result)
+                    
+    })
+    .catch(console.error)
+
+}, []);
+
   return (
-   <div>
+   <div className="backimg">
    <Header  />
-   <Forms />
+   <Main />
    </div>
   );
 }

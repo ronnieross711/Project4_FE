@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useHistory } from 'react-router-dom';
+import './Login.css'
 
-function CreateForm() {
-    const initialState = { email: '', password: '' };
+function LoginForm() {
+    let history = useHistory();
+    const initialState = { username: '', password: '' };
     const [formState, setFormState] = useState(initialState);
+    // let history = useHistory();
   
     const handleChange = (event) => {
       setFormState({ ...formState, [event.target.id]: event.target.value });
@@ -14,16 +18,17 @@ function CreateForm() {
       console.log(formState);
       // clear the form
       setFormState(initialState);
+      history.push('/');
     };
   
     return (
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">email:</label>
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor="username">username:</label>
           <input
-            id="email"
+            id="username"
             type="text"
             onChange={handleChange}
-            value={formState.email}
+            value={formState.username}
           />
           <label htmlFor="password">Password:</label>
           <input
@@ -32,8 +37,9 @@ function CreateForm() {
             onChange={handleChange}
             value={formState.password}
           />
-          <button type="submit">Create Account</button>
+          <button type="submit">Log In</button>
         </form>
       );
     }
-    export default CreateForm;
+    
+    export default LoginForm;

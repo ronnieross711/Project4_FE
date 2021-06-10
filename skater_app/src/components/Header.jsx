@@ -1,10 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Navbar  from './Navbar';
 
-function Header(props) {
+function Header() {
+    
     return (
         <div>
-            <h1>Skater Base</h1>
-            <p>Start by creating an account and then adding in pro skaters to the database</p>
+            
+            
+            
+            <Navbar />
         </div>
     );
 }
