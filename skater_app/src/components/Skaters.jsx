@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Skater from "./Skater";
 
+
 function Skaters(props) {
   const [skaters, setSkaters] = useState([]);
 
@@ -31,6 +32,7 @@ function Skaters(props) {
           </div>
         );
       })}
+      
     </section>
   );
 }

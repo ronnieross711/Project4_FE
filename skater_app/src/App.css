@@ -37,6 +37,10 @@
   }
 }
 
+.createSkater {
+  display: flex;
+  justify-content: right;
+}
 
 
 /* .backimg{

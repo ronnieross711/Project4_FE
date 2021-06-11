@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Skater(props) {
-  const [skaterDetail, setSkaterDetail] = useState(null);
+  const [skaterDetail, setSkaterDetail] = useState([]);
   console.log(props.match.params.id);
 
   useEffect(() => {
@@ -10,6 +10,7 @@ function Skater(props) {
       .then((result) => {
         setSkaterDetail(result);
         console.log(result);
+        console.log(skaterDetail)
       })
 
       .catch(console.error);
@@ -17,7 +18,7 @@ function Skater(props) {
 
   return (
     <div>
-      <img src={skaterDetail.photo_url} alt={skaterDetail.id}/>
+      {/* <img src={skaterDetail.photo_url} alt={skaterDetail.id}/> */}
       <h3>Name: {skaterDetail.name}</h3>
       <h3>Age: {skaterDetail.age}</h3>
       <h3>Hometown: {skaterDetail.home_town}</h3>
