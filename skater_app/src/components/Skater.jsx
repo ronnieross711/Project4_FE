@@ -1,4 +1,6 @@
+// Skater.jsx
 import React, { useState, useEffect } from "react";
+import DeleteButton from './DeleteButton';
 
 function Skater(props) {
   const [skaterDetail, setSkaterDetail] = useState([]);
@@ -24,6 +26,7 @@ function Skater(props) {
       <h3>Hometown: {skaterDetail.home_town}</h3>
       <h3>Sponsor: {skaterDetail.board_sponsor}</h3>
       <h3>Shoe Sponsor: {skaterDetail.shoe_sponsor}</h3>
+      <DeleteButton skaterId={skaterDetail.id}/>
     </div>
   );
 }

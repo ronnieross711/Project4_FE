@@ -1,3 +1,5 @@
+// Main.jsx
+
 import React from "react";
 import Create from "./Create";
 import Home from "./Home";
@@ -16,6 +18,7 @@ function Main(props) {
       <Route exact path="/login" component={Login} />
       <Route exact path="/skaters" component={Skaters} />
       <Route exact path="/skaters/:id" component={Skater} />
+      
     </div>
   );
 }

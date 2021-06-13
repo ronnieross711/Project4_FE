@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Skater from "./Skater";
+
+
+
 
 
 function Skaters(props) {
@@ -29,6 +31,7 @@ function Skaters(props) {
               </div>
               <h3>{skater.name}</h3>
             </Link>
+            
           </div>
         );
       })}
@@ -39,6 +42,3 @@ function Skaters(props) {
 
 export default Skaters;
 
-/* map through a collection of our skaters.
-            from our skater component. this is going to map all the skaters from the database
-            And when ypu click on a skater it will show you their info and tricks. */
