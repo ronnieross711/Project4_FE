@@ -67,7 +67,7 @@ function CreateSkater(props) {
         type="text"
         
       />
-      {/* <Link to={"/createskaters"}> */}
+      {/* <Link to={"/skaters"}> */}
         <input type="submit"/>
       {/* </Link> */}
     </form>
